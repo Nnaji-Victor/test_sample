@@ -1,0 +1,23 @@
+.button{
+  padding: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  background-color: white;
+  border-radius: 10px;
+  font-size: .8rem;
+  border: 1px solid #FFF;
+  cursor: pointer;
+  width: 80px;
+  margin-left: 10px;
+
+  @media (max-width: 1024px){
+    padding: 10px;
+    font-size: .6rem;
+  }
+}
+
+/* .button:hover {
+  filter: invert(1);
+  text-decoration: none;
+} */
