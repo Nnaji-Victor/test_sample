@@ -11,7 +11,7 @@ function App() {
   const [surname, setSurname] = React.useState("")
   const [email, setEmail] = React.useState("")
   const [age, setAge] = React.useState("")
-  const [color, setColor] = React.useState(null)
+  const [color, setColor] = React.useState('#000')
   const [gender, setGender] = React.useState('')
   const [agree, setAgree] = React.useState("")
   const [error, setError] = React.useState("")
@@ -19,6 +19,14 @@ function App() {
   const handleCancel = (e) => {
     e.preventDefault();
     console.log("cancel clicked")
+    setName("")
+    setSurname("")
+    setEmail("")
+    setAge("")
+    setColor("#000")
+    setGender('')
+    setGender("")
+    setError("")
   }
 
   const handleSubmit = (e) => {
