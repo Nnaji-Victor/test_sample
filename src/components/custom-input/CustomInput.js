@@ -5,7 +5,7 @@ const CustomInput = ({ handleChange, label, ...otherProps }) => {
     return (
         <>
             <div className='group'>
-                <input 
+                <input
                     className={!!otherProps.error ? 'form-input error-out' : 'form-input'}
                     onChange={handleChange} {...otherProps} />
                 {label ? (

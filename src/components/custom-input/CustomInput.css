@@ -1,6 +1,5 @@
 .group {
     position: relative;
-    /* margin: 45px 0; */
     justify-content: center;
     display: flex;
 }
@@ -24,7 +23,6 @@
 }
 
 input[type='color'] {
-    /* letter-spacing: 0.1em; */
     padding: 0;
 }
 
@@ -35,7 +33,6 @@ input[type='color'] {
     position: absolute;
     pointer-events: none;
     left: 5px;
-    /* top: 45px; */
     transition: 300ms ease all;
 }
 

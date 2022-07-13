@@ -103,7 +103,7 @@ function App() {
 
   return (
     <div className="App">
-      {[...Array(arrayNum)].map((elementInArray, index) => ( 
+      {[...Array(arrayNum)].map((elementInArray, index) => (
         <Card backgroundColor={randomBgColorArr[index]}>
           <form onSubmit={handleSubmit}>
             <Heading title="Card 1" textColor="#F00" />
@@ -154,7 +154,7 @@ function App() {
             />
 
             <div className='radio-container'>
-              <input type="radio" value="male" id="male"
+              <input type="radio" value="male" id="male" defaultChecked
                 onChange={e => setGender(e.target.value)} name="gender" />
               <label for="male">Male</label>
 
