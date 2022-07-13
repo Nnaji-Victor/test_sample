@@ -16,7 +16,10 @@ function App() {
   const [color, setColor] = React.useState('#000000')
   const [gender, setGender] = React.useState('')
   const [agree, setAgree] = React.useState("")
-  const [error, setError] = React.useState("")
+  const [nameError, setNameError] = React.useState("")
+  const [surNameError, setSurNameError] = React.useState("")
+  const [emailError, setEmailError] = React.useState("")
+  const [ageError, setAgeError] = React.useState("")
 
   const handleCancel = (e) => {
     e.preventDefault();
@@ -27,7 +30,10 @@ function App() {
     setColor("#000000")
     setGender('')
     setGender("")
-    setError("")
+    setNameError("")
+    setSurNameError("")
+    setEmailError("")
+    setAgeError("")
   }
 
   const handleSubmit = (e) => {
@@ -44,19 +50,19 @@ function App() {
     const { value, name } = e.target
     if (name === 'name') {
       setName(value)
-      setError(validateField(name, value));
+      setNameError(validateField(name, value))
     }
     else if (name === 'surname') {
       setSurname(value)
-      setError(validateField(name, value))
+      setSurNameError(validateField(name, value))
     }
     else if (name === 'email') {
       setEmail(value)
-      setError(validateField(name, value))
+      setEmailError(validateField(name, value))
     }
     else if (name === 'age') {
       setAge(value)
-      setError(validateField(name, value))
+      setAgeError(validateField(name, value))
     }
     else if (name === 'color') {
       setColor(value)
@@ -102,7 +108,6 @@ function App() {
           <form onSubmit={handleSubmit}>
             <Heading title="Card 1" textColor="#F00" />
             <SubHeading title="first card description" textColor="#FFF" />
-            {error && <p className='error'>* {error}</p>}
             <CustomInput
               name='name'
               type='text'
@@ -110,7 +115,7 @@ function App() {
               value={name}
               label='name'
               placeholder="please enter your name"
-              required
+              error={nameError}
             />
             <CustomInput
               name='surname'
@@ -119,7 +124,7 @@ function App() {
               value={surname}
               label='surname'
               placeholder="please enter your surname"
-              required
+              error={surNameError}
             />
             <CustomInput
               name='email'
@@ -128,7 +133,7 @@ function App() {
               value={email}
               label='email'
               placeholder="please enter your email"
-              required
+              error={emailError}
             />
             <CustomInput
               name='age'
@@ -137,6 +142,7 @@ function App() {
               value={age}
               label='age'
               placeholder="please enter your age"
+              error={ageError}
             />
             <CustomInput
               name='color'

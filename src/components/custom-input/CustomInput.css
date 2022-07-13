@@ -38,3 +38,13 @@ input[type='color'] {
     /* top: 45px; */
     transition: 300ms ease all;
 }
+
+.error-out {
+    border: 1px solid red;
+}
+
+.error {
+    text-align: center;
+    color: red;
+    margin-top: 0;
+}
